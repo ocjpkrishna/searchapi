@@ -1,0 +1,20 @@
+# Contact Search API Documentation
+
+The Contact Search API provides an endpoint for searching user information based on specific criteria.
+
+## Endpoint: `/api/search`
+
+### Description
+This endpoint allows users to search for contact information based on a specified field, operation, and values.
+
+### Request Parameters
+
+- `field`: The name of the field to be searched. (e.g., `username`, `address.city`)
+- `operation`: The operation to be performed. Supported operations include `Equals` and `IN`.
+- `values`: The values to search for. You can provide multiple values separated by commas.
+
+### Example Usage and Responses
+
+1. **Search by Username with Equals Operation**
+
+   **Request:**
