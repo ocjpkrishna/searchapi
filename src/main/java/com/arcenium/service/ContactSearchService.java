@@ -1,9 +1,8 @@
 package com.arcenium.service;
 
-import com.arcenium.controller.repository.ContactSearchRepo;
+import com.arcenium.repository.ContactSearchRepo;
 import com.arcenium.domain.User;
 import com.arcenium.exception.UserExceedException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

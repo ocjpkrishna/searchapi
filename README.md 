@@ -3,6 +3,8 @@
 The Contact Search API provides an endpoint for searching user information based on specific criteria.
 
 ScreenRecord: [https://drive.google.com/file/d/1Vbnm5Xnup2bP0GVEz4tUBCQu9Ku0GvyX/view?usp=sharing]
+Screen shots:
+
 ## Endpoint: `/api/search`
 
 ### Description

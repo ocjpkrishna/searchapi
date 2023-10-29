@@ -1,4 +1,4 @@
-package com.arcenium.controller.repository;
+package com.arcenium.repository;
 
 import com.arcenium.domain.User;
 import com.arcenium.exception.UserNotFoundException;
