@@ -15,6 +15,54 @@ This endpoint allows users to search for contact information based on a specifie
 
 ### Example Usage and Responses
 
-1. **Search by Username with Equals Operation**
+1. Search by Username with Equals Operation
 
-   **Request:**
+   Request:
+  http://localhost:8080/api/search?field=username&operation=Equals&values=vinayk&values=anamnilofar&values=krishna
+
+   Response: [1, -1]
+
+Explanation: User with username 'vinayk' is found with ID 1, 'anamnilofar' is not found (-1), 'krishna' is not found (-1).
+
+2. Request:
+
+http://localhost:8080/api/search?field=username&operation=Equals&values=vinayk&values=anamnilofar&values=krishna&values=CharviM
+
+Response: [1, 8, 3]
+
+Explanation: User with username 'vinayk' is found with ID 1, 'anamnilofar' is found with ID 8, 'krishna' is found with ID 3.
+
+3. Limit on Number of Usernames
+
+Request:
+
+http://localhost:8080/api/search?field=username&operation=Equals&values=vinayk&values=anamnilofar&values=krishna&values=CharviM
+
+Response:
+
+{
+  "code": "400 BAD_REQUEST",
+  "message": "More than three users are not allowed",
+  "status": "BAD_REQUEST"
+}
+
+Explanation: The API does not support searching for more than three usernames at once.
+
+4. Search by City with IN Operation
+
+Request:
+
+perl
+
+http://localhost:8080/api/search?field=address.city&operation=IN&values=Mumbai&values=Kolkata
+
+Response: [1, 2]
+
+Explanation: Users located in 'Mumbai' and 'Kolkata' are found with IDs 1 and 2 respectively.
+
+Search by City with Partial Match
+
+Request: http://localhost:8080/api/search?field=address.city&operation=IN&values=Mumbai&values=lahore
+
+Response: [1, -1]
+Explanation: User located in 'Mumbai' is found with ID 1, 'lahore' is not found (-1).
