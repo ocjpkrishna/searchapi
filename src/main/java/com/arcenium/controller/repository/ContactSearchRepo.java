@@ -1,6 +1,7 @@
 package com.arcenium.controller.repository;
 
 import com.arcenium.domain.User;
+import com.arcenium.exception.UserNotFoundException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
@@ -31,7 +32,7 @@ public class ContactSearchRepo implements CommandLineRunner {
 
     public List<User> getUsers() {
         if (users == null) {
-            // throw UserNotFoundException()l
+            throw new UserNotFoundException("user list is null");
         }
         return users;
     }
