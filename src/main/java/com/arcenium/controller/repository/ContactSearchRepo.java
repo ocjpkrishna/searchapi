@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Repository;
 
 import java.io.BufferedReader;
@@ -17,10 +18,23 @@ import java.util.List;
 
 @Repository
 @Slf4j
-public class ContactSearchRepo {
+public class ContactSearchRepo implements CommandLineRunner {
     private static final String USER_DATA_ENDPOINT = "https://raw.githubusercontent.com/arcjsonapi/ApiSampleData/master/api/users";
 
     private static final ObjectMapper objectMapper = new ObjectMapper();
+    private List<User> users;
+
+    @Override
+    public void run(String... args) throws Exception {
+        this.users = fetchUserData();
+    }
+
+    public List<User> getUsers() {
+        if (users == null) {
+            // throw UserNotFoundException()l
+        }
+        return users;
+    }
 
     public List<User> fetchUserData() {
         try {
@@ -50,5 +64,4 @@ public class ContactSearchRepo {
         }
         return null;
     }
-
 }

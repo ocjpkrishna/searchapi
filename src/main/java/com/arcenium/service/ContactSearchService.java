@@ -23,7 +23,7 @@ public class ContactSearchService {
     private ContactSearchRepo contactSearchRepo;
 
     public List<Integer> apiResponse(String field, String operation, List<String> values) {
-        List<User> users = contactSearchRepo.fetchUserData();
+        List<User> users = contactSearchRepo.getUsers();
 
         if (values.size() > 3) {
             throw new UserExceedException("more than three users are not allowed");
