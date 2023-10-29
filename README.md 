@@ -4,9 +4,8 @@ The Contact Search API provides an endpoint for searching user information based
 
 ScreenRecord: [https://drive.google.com/file/d/1Vbnm5Xnup2bP0GVEz4tUBCQu9Ku0GvyX/view?usp=sharing]
 Screen shots:
-![Package Structure] (https://github.com/ocjpkrishna/searchapi/blob/arc-search/images/1.package_stc.png)
-![Extended Package Structure] (https://github.com/ocjpkrishna/searchapi/blob/arc-search/images/2extended_pak.png)
-
+![Alt Package_Structure] (https://github.com/ocjpkrishna/searchapi/blob/arc-search/images/1.package_stc.png)
+![Alt Extended_Package_Structure] (https://github.com/ocjpkrishna/searchapi/blob/arc-search/images/2extended_pak.png)
 ## Endpoint: `/api/search`
 
 ### Description
